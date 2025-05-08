@@ -1,0 +1,11 @@
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\bin\Debug\netstandard2.0\SES.FluidStateMachine.deps.json
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\bin\Debug\netstandard2.0\SES.FluidStateMachine.dll
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\bin\Debug\netstandard2.0\SES.FluidStateMachine.pdb
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.csproj.AssemblyReference.cache
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.AssemblyInfoInputs.cache
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.AssemblyInfo.cs
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.csproj.CoreCompileInputs.cache
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.sourcelink.json
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.dll
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\obj\Debug\netstandard2.0\SES.FluidStateMachine.pdb

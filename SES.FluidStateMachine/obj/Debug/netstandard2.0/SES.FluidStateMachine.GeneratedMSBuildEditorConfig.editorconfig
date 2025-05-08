@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = SES.FluidStateMachine
+build_property.ProjectDir = C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
