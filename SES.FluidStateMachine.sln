@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SES.FluidStateMachine", "SES.FluidStateMachine\SES.FluidStateMachine.csproj", "{F50E8498-C7B9-4592-929F-E886415F7029}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SES.FluidStateMachine.UnitTests", "SES.FluidStateMachine.UnitTests\SES.FluidStateMachine.UnitTests.csproj", "{A71D5605-5AF4-4BF8-9CC6-08F63239F582}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F50E8498-C7B9-4592-929F-E886415F7029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F50E8498-C7B9-4592-929F-E886415F7029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F50E8498-C7B9-4592-929F-E886415F7029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

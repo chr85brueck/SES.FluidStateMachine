@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SES.FluidStateMachine")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71d174ebf9a7a8b6509ef36a247cb7cf4eb3b54f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d92403f042be7fa34f4d79b7970e60cbc4cac77c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SES.FluidStateMachine")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SES.FluidStateMachine")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
