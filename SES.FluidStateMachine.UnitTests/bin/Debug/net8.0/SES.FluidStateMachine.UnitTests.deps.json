@@ -14,6 +14,7 @@
           "Microsoft.NET.Test.Sdk": "17.11.1",
           "Microsoft.Testing.Extensions.CodeCoverage": "17.12.5",
           "Microsoft.Testing.Extensions.TrxReport": "1.4.1",
+          "SES.FluidStateMachine": "1.0.0",
           "Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter": "14.0.0.0",
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions": "14.0.0.0"
         },
@@ -970,6 +971,14 @@
           "System.Text.Encodings.Web": "6.0.0"
         }
       },
+      "SES.FluidStateMachine/1.0.0": {
+        "runtime": {
+          "SES.FluidStateMachine.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter/14.0.0.0": {
         "runtime": {
           "Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll": {
@@ -1191,6 +1200,11 @@
       "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
       "path": "system.text.json/6.0.0",
       "hashPath": "system.text.json.6.0.0.nupkg.sha512"
+    },
+    "SES.FluidStateMachine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter/14.0.0.0": {
       "type": "reference",

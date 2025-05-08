@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Source\\SES\\SES.FluidStateMachine\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A71D5605-5AF4-4BF8-9CC6-08F63239F582}|SES.FluidStateMachine.UnitTests\\SES.FluidStateMachine.UnitTests.csproj|c:\\source\\ses\\ses.fluidstatemachine\\ses.fluidstatemachine.unittests\\statemachinetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71D5605-5AF4-4BF8-9CC6-08F63239F582}|SES.FluidStateMachine.UnitTests\\SES.FluidStateMachine.UnitTests.csproj|solutionrelative:ses.fluidstatemachine.unittests\\statemachinetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F50E8498-C7B9-4592-929F-E886415F7029}|SES.FluidStateMachine\\SES.FluidStateMachine.csproj|c:\\source\\ses\\ses.fluidstatemachine\\ses.fluidstatemachine\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F50E8498-C7B9-4592-929F-E886415F7029}|SES.FluidStateMachine\\SES.FluidStateMachine.csproj|solutionrelative:ses.fluidstatemachine\\statemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A71D5605-5AF4-4BF8-9CC6-08F63239F582}|SES.FluidStateMachine.UnitTests\\SES.FluidStateMachine.UnitTests.csproj|c:\\source\\ses\\ses.fluidstatemachine\\ses.fluidstatemachine.unittests\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A71D5605-5AF4-4BF8-9CC6-08F63239F582}|SES.FluidStateMachine.UnitTests\\SES.FluidStateMachine.UnitTests.csproj|solutionrelative:ses.fluidstatemachine.unittests\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F50E8498-C7B9-4592-929F-E886415F7029}|SES.FluidStateMachine\\SES.FluidStateMachine.csproj|c:\\source\\ses\\ses.fluidstatemachine\\ses.fluidstatemachine\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F50E8498-C7B9-4592-929F-E886415F7029}|SES.FluidStateMachine\\SES.FluidStateMachine.csproj|solutionrelative:ses.fluidstatemachine\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{584A03F1-9405-44FB-B7D9-94913D59E119}|SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj|c:\\source\\ses\\ses.fluidstatemachine\\ses.fluidstatemachine.demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{584A03F1-9405-44FB-B7D9-94913D59E119}|SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj|solutionrelative:ses.fluidstatemachine.demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{584A03F1-9405-44FB-B7D9-94913D59E119}|SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj|c:\\source\\ses\\ses.fluidstatemachine\\ses.fluidstatemachine.demo\\ses.fluidstatemachine.demo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{584A03F1-9405-44FB-B7D9-94913D59E119}|SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj|solutionrelative:ses.fluidstatemachine.demo\\ses.fluidstatemachine.demo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.Demo\\Program.cs",
+              "RelativeDocumentMoniker": "SES.FluidStateMachine.Demo\\Program.cs",
+              "ToolTip": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.Demo\\Program.cs",
+              "RelativeToolTip": "SES.FluidStateMachine.Demo\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwC4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T19:45:45.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StateMachineTests.cs",
+              "DocumentMoniker": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.UnitTests\\StateMachineTests.cs",
+              "RelativeDocumentMoniker": "SES.FluidStateMachine.UnitTests\\StateMachineTests.cs",
+              "ToolTip": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.UnitTests\\StateMachineTests.cs",
+              "RelativeToolTip": "SES.FluidStateMachine.UnitTests\\StateMachineTests.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAkwI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T19:34:44.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MSTestSettings.cs",
               "DocumentMoniker": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.UnitTests\\MSTestSettings.cs",
               "RelativeDocumentMoniker": "SES.FluidStateMachine.UnitTests\\MSTestSettings.cs",
@@ -36,14 +74,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine\\Class1.cs",
-              "RelativeDocumentMoniker": "SES.FluidStateMachine\\Class1.cs",
-              "ToolTip": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine\\Class1.cs",
-              "RelativeToolTip": "SES.FluidStateMachine\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "StateMachine.cs",
+              "DocumentMoniker": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine\\StateMachine.cs",
+              "RelativeDocumentMoniker": "SES.FluidStateMachine\\StateMachine.cs",
+              "ToolTip": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine\\StateMachine.cs",
+              "RelativeToolTip": "SES.FluidStateMachine\\StateMachine.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAswCAAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T19:31:13.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SES.FluidStateMachine.Demo",
+              "DocumentMoniker": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj",
+              "RelativeDocumentMoniker": "SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj",
+              "ToolTip": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj",
+              "RelativeToolTip": "SES.FluidStateMachine.Demo\\SES.FluidStateMachine.Demo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-08T19:46:12.115Z",
               "EditorCaption": ""
             }
           ]

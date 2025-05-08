@@ -12,4 +12,8 @@
     <TestingPlatformShowTestsFailure>true</TestingPlatformShowTestsFailure>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SES.FluidStateMachine\SES.FluidStateMachine.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SES.FluidStateMachine.Demo/1.0.0": {
+        "dependencies": {
+          "SES.FluidStateMachine": "1.0.0"
+        },
+        "runtime": {
+          "SES.FluidStateMachine.Demo.dll": {}
+        }
+      },
+      "SES.FluidStateMachine/1.0.0": {
+        "runtime": {
+          "SES.FluidStateMachine.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SES.FluidStateMachine.Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SES.FluidStateMachine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

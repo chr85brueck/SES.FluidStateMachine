@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SES.FluidStateMachine", "SE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SES.FluidStateMachine.UnitTests", "SES.FluidStateMachine.UnitTests\SES.FluidStateMachine.UnitTests.csproj", "{A71D5605-5AF4-4BF8-9CC6-08F63239F582}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SES.FluidStateMachine.Demo", "SES.FluidStateMachine.Demo\SES.FluidStateMachine.Demo.csproj", "{584A03F1-9405-44FB-B7D9-94913D59E119}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A71D5605-5AF4-4BF8-9CC6-08F63239F582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584A03F1-9405-44FB-B7D9-94913D59E119}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584A03F1-9405-44FB-B7D9-94913D59E119}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584A03F1-9405-44FB-B7D9-94913D59E119}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584A03F1-9405-44FB-B7D9-94913D59E119}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

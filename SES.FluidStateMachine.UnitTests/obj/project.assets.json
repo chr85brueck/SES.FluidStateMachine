@@ -1129,6 +1129,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "SES.FluidStateMachine/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SES.FluidStateMachine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SES.FluidStateMachine.dll": {}
+        }
       }
     }
   },
@@ -2596,6 +2606,11 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "SES.FluidStateMachine/1.0.0": {
+      "type": "project",
+      "path": "../SES.FluidStateMachine/SES.FluidStateMachine.csproj",
+      "msbuildProject": "../SES.FluidStateMachine/SES.FluidStateMachine.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2605,7 +2620,8 @@
       "MSTest.TestFramework >= 3.6.1",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "Microsoft.Testing.Extensions.CodeCoverage >= 17.12.5",
-      "Microsoft.Testing.Extensions.TrxReport >= 1.4.1"
+      "Microsoft.Testing.Extensions.TrxReport >= 1.4.1",
+      "SES.FluidStateMachine >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2640,7 +2656,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine\\SES.FluidStateMachine.csproj": {
+              "projectPath": "C:\\Source\\SES\\SES.FluidStateMachine\\SES.FluidStateMachine\\SES.FluidStateMachine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

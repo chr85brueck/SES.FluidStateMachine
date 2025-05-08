@@ -252,3 +252,7 @@ C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\obj\Debug\ne
 C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\obj\Debug\net8.0\SES.FluidStateMachine.UnitTests.pdb
 C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\obj\Debug\net8.0\SES.FluidStateMachine.UnitTests.genruntimeconfig.cache
 C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\obj\Debug\net8.0\ref\SES.FluidStateMachine.UnitTests.dll
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\bin\Debug\net8.0\.msCoverageExtensionSourceRootsMapping_SES.FluidStateMachine.UnitTests
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_SES.FluidStateMachine.UnitTests
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\bin\Debug\net8.0\SES.FluidStateMachine.dll
+C:\Source\SES\SES.FluidStateMachine\SES.FluidStateMachine.UnitTests\bin\Debug\net8.0\SES.FluidStateMachine.pdb
