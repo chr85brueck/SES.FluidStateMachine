@@ -22,11 +22,11 @@ jobs:
         dotnet-version: 8.0
 
     - name: Restore dependencies
-      run: dotnet restore SES.FluidStateMachine/SES.FluidStateMachine.sln
+      run: dotnet restore SES.FluidStateMachine.sln
       # Replace `AutomatedBuildTest/AutomatedBuildTest.sln` with the actual path to your solution file.
 
     - name: Build solution
-      run: dotnet build --no-restore --configuration Release SES.FluidStateMachine/SES.FluidStateMachine.sln
+      run: dotnet build --no-restore --configuration Release SES.FluidStateMachine.sln
       # Replace `AutomatedBuildTest/AutomatedBuildTest.sln` with the actual path to your solution file.
 
     - name: Run tests
