@@ -23,38 +23,12 @@ jobs:
 
     - name: Restore dependencies
       run: dotnet restore AutomatedBuildTest/AutomatedBuildTest.sln
-      # Replace `src/MySolution.sln` with the actual path to your solution or project file.
+      # Replace `AutomatedBuildTest/AutomatedBuildTest.sln` with the actual path to your solution file.
 
     - name: Build solution
-      run: dotnet build --no-restore --configuration Release name: .NET Build and Test
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 8.0
-
-    - name: Restore dependencies
-      run: dotnet restore AutomatedBuildTest/AutomatedBuildTest.sln
-      # Replace `src/MySolution.sln` with the actual path to your solution or project file.
-
-    - name: Build solution
-      run: dotnet build --no-restore --configuration Release SES.FluidStateMachine.sln
+      run: dotnet build --no-restore --configuration Release AutomatedBuildTest/AutomatedBuildTest.sln
+      # Replace `AutomatedBuildTest/AutomatedBuildTest.sln` with the actual path to your solution file.
 
     - name: Run tests
       run: dotnet test --no-build --verbosity normal SES.FluidStateMachine.UnitTests/SES.FluidStateMachine.UnitTests.csproj
+      # Replace `SES.FluidStateMachine.UnitTests/SES.FluidStateMachine.UnitTests.csproj` with the actual path to your test project.
