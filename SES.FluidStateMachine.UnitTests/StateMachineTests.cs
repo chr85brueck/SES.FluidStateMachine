@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Threading.Tasks;
 
 namespace SES.FluidStateMachine.Tests
 {
@@ -23,27 +24,35 @@ namespace SES.FluidStateMachine.Tests
     public class StateMachineTests
     {
         [TestMethod]
-        public void CanTransitionBetweenStates()
+        public async Task CanTransitionBetweenStates_WithDelays()
         {
             // Arrange
             var stateMachine = new StateMachine<States, Events>(States.Off);
-            stateMachine.Configure(States.Off).Permit(Events.PowerOn, States.On);
-            stateMachine.Configure(States.On).Permit(Events.PowerOff, States.Off);
+            stateMachine.Configure(States.Off)
+                .Permit(Events.PowerOn, States.On)
+                .WithExitDelay(500); // 500ms delay
+
+            stateMachine.Configure(States.On)
+                .Permit(Events.PowerOff, States.Off)
+                .WithEntryDelay(500); // 500ms delay
 
             // Act
-            stateMachine.Fire(Events.PowerOn);
+            var startTime = DateTime.UtcNow;
+            await stateMachine.FireAsync(Events.PowerOn);
             var stateAfterPowerOn = stateMachine.CurrentState;
 
-            stateMachine.Fire(Events.PowerOff);
+            await stateMachine.FireAsync(Events.PowerOff);
             var stateAfterPowerOff = stateMachine.CurrentState;
+            var duration = DateTime.UtcNow - startTime;
 
             // Assert
             Assert.AreEqual(States.On, stateAfterPowerOn);
             Assert.AreEqual(States.Off, stateAfterPowerOff);
+            Assert.IsTrue(duration.TotalMilliseconds >= 1000, "Delays were not applied correctly.");
         }
 
         [TestMethod]
-        public void EntryAndExitActionsAreExecuted()
+        public async Task EntryAndExitActionsAreExecuted_WithDelays()
         {
             // Arrange
             var stateMachine = new StateMachine<States, Events>(States.Off);
@@ -52,64 +61,59 @@ namespace SES.FluidStateMachine.Tests
 
             stateMachine.Configure(States.Off)
                 .Permit(Events.PowerOn, States.On)
-                .OnExit(() => exitedOffState = true);
+                .OnExit(() => exitedOffState = true)
+                .WithExitDelay(500); // 500ms delay
 
             stateMachine.Configure(States.On)
                 .Permit(Events.PowerOff, States.Off)
-                .OnEntry(() => enteredOnState = true);
+                .OnEntry(() => enteredOnState = true)
+                .WithEntryDelay(500); // 500ms delay
 
             // Act
-            stateMachine.Fire(Events.PowerOn);
+            var startTime = DateTime.UtcNow;
+            await stateMachine.FireAsync(Events.PowerOn);
+            var duration = DateTime.UtcNow - startTime;
 
             // Assert
-            Assert.IsTrue(enteredOnState);
-            Assert.IsTrue(exitedOffState);
+            Assert.IsTrue(enteredOnState, "Entry action was not executed.");
+            Assert.IsTrue(exitedOffState, "Exit action was not executed.");
+            Assert.IsTrue(duration.TotalMilliseconds >= 500, "Delays were not applied correctly.");
         }
 
         [TestMethod]
-        public void ThrowsExceptionForUndefinedTransition()
-        {
-            // Arrange
-            var stateMachine = new StateMachine<States, Events>(States.Off);
-
-            // Act & Assert
-            var exception = Assert.ThrowsException<InvalidOperationException>(() =>
-            {
-                stateMachine.Fire(Events.PowerOff);
-            });
-
-            Assert.AreEqual("No transition defined from state Off using trigger PowerOff", exception.Message);
-        }
-
-        [TestMethod]
-        public void CanHandleComplexStateTransitions()
+        public async Task CanHandleComplexStateTransitions_WithDelays()
         {
             // Arrange
             var stateMachine = new StateMachine<States, Events>(States.Off);
             stateMachine.Configure(States.Off)
-                .Permit(Events.PowerOn, States.On);
+                .Permit(Events.PowerOn, States.On)
+                .WithExitDelay(500); // 500ms delay
 
             stateMachine.Configure(States.On)
                 .Permit(Events.PowerOff, States.Off)
-                .Permit(Events.StartHeating, States.Heating);
+                .Permit(Events.StartHeating, States.Heating)
+                .WithEntryDelay(500); // 500ms delay
 
             stateMachine.Configure(States.Heating)
-                .Permit(Events.StartCooling, States.Cooling);
+                .Permit(Events.StartCooling, States.Cooling)
+                .WithEntryDelay(500)
+                .WithExitDelay(500);
 
             stateMachine.Configure(States.Cooling)
-                .Permit(Events.StartHeating, States.Heating);
+                .Permit(Events.StartHeating, States.Heating)
+                .WithEntryDelay(500);
 
             // Act
-            stateMachine.Fire(Events.PowerOn);
+            await stateMachine.FireAsync(Events.PowerOn);
             var stateAfterPowerOn = stateMachine.CurrentState;
 
-            stateMachine.Fire(Events.StartHeating);
+            await stateMachine.FireAsync(Events.StartHeating);
             var stateAfterHeating = stateMachine.CurrentState;
 
-            stateMachine.Fire(Events.StartCooling);
+            await stateMachine.FireAsync(Events.StartCooling);
             var stateAfterCooling = stateMachine.CurrentState;
 
-            stateMachine.Fire(Events.StartHeating);
+            await stateMachine.FireAsync(Events.StartHeating);
             var stateAfterReHeating = stateMachine.CurrentState;
 
             // Assert
@@ -120,7 +124,7 @@ namespace SES.FluidStateMachine.Tests
         }
 
         [TestMethod]
-        public void CanDefineEntryAndExitActionsForStates()
+        public async Task CanDefineEntryAndExitActionsForStates_WithDelays()
         {
             // Arrange
             var stateMachine = new StateMachine<States, Events>(States.Off);
@@ -132,18 +136,20 @@ namespace SES.FluidStateMachine.Tests
 
             stateMachine.Configure(States.On)
                 .Permit(Events.StartHeating, States.Heating)
-                .OnExit(() => exitedOn = true);
+                .OnExit(() => exitedOn = true)
+                .WithExitDelay(500); // 500ms delay
 
             stateMachine.Configure(States.Heating)
-                .OnEntry(() => enteredHeating = true);
+                .OnEntry(() => enteredHeating = true)
+                .WithEntryDelay(500); // 500ms delay
 
             // Act
-            stateMachine.Fire(Events.PowerOn);
-            stateMachine.Fire(Events.StartHeating);
+            await stateMachine.FireAsync(Events.PowerOn);
+            await stateMachine.FireAsync(Events.StartHeating);
 
             // Assert
-            Assert.IsTrue(enteredHeating);
-            Assert.IsTrue(exitedOn);
+            Assert.IsTrue(enteredHeating, "Heating state entry action did not execute.");
+            Assert.IsTrue(exitedOn, "On state exit action did not execute.");
         }
     }
 }

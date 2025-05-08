@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SES.FluidStateMachine.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebd70f5351fc8e33cc6cc9e2d129c841ff25e5ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecc033ca3a50a0be54364a08d5162b2d028fcd1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SES.FluidStateMachine.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SES.FluidStateMachine.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

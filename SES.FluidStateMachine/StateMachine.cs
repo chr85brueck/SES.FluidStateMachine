@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SES.FluidStateMachine
 {
     public class StateMachine<TState, TEvent>
     {
-        private readonly Dictionary<TState, StateConfiguration> _stateConfigurations = 
+        private readonly Dictionary<TState, StateConfiguration> _stateConfigurations =
             new Dictionary<TState, StateConfiguration>();
 
         private TState _currentState;
@@ -28,17 +29,17 @@ namespace SES.FluidStateMachine
             return configuration;
         }
 
-        public void Fire(TEvent trigger)
+        public async Task FireAsync(TEvent trigger)
         {
             if (_stateConfigurations.TryGetValue(_currentState, out var configuration))
             {
                 if (configuration.TryGetTransition(trigger, out var destinationState))
                 {
-                    configuration.ExecuteExitAction();
+                    await configuration.ExecuteExitActionAsync();
                     _currentState = destinationState;
                     if (_stateConfigurations.TryGetValue(_currentState, out var newConfig))
                     {
-                        newConfig.ExecuteEntryAction();
+                        await newConfig.ExecuteEntryActionAsync();
                     }
                 }
                 else
@@ -54,6 +55,8 @@ namespace SES.FluidStateMachine
             private readonly Dictionary<TEvent, TState> _transitions = new Dictionary<TEvent, TState>();
             private Action _entryAction;
             private Action _exitAction;
+            private int _entryDelay; // Delay in milliseconds
+            private int _exitDelay;  // Delay in milliseconds
 
             public StateConfiguration(TState state)
             {
@@ -78,18 +81,38 @@ namespace SES.FluidStateMachine
                 return this;
             }
 
+            public StateConfiguration WithEntryDelay(int milliseconds)
+            {
+                _entryDelay = milliseconds;
+                return this;
+            }
+
+            public StateConfiguration WithExitDelay(int milliseconds)
+            {
+                _exitDelay = milliseconds;
+                return this;
+            }
+
             internal bool TryGetTransition(TEvent trigger, out TState destinationState)
             {
                 return _transitions.TryGetValue(trigger, out destinationState);
             }
 
-            internal void ExecuteEntryAction()
+            internal async Task ExecuteEntryActionAsync()
             {
+                if (_entryDelay > 0)
+                {
+                    await Task.Delay(_entryDelay);
+                }
                 _entryAction?.Invoke();
             }
 
-            internal void ExecuteExitAction()
+            internal async Task ExecuteExitActionAsync()
             {
+                if (_exitDelay > 0)
+                {
+                    await Task.Delay(_exitDelay);
+                }
                 _exitAction?.Invoke();
             }
         }
